@@ -7,7 +7,7 @@ with Session() as s:
     bs_content = bs(site.content, "html.parser")
     token = bs_content.find("input", {"name":"form_data_id"})["value"]
     # token1 = bs_content.find("input", {"name":"form_data_id"})["value"]
-    print(token)
+    # print(token)
     login_data = {
         'login_name': 'mhorder',
     	'password': 'MasonH6',
@@ -40,7 +40,7 @@ with Session() as s:
 
 
 
-
+list = []
 
 
 row = soup.find_all('table', attrs={'class': 'student_row'})
@@ -59,10 +59,32 @@ while i < 7:
     grade = grade_text.text
     zero_num = [int(h) for h in zero.split() if h.isdigit()]
 
+    list.extend([[course.strip(), grade.strip(), zero_num[0]]])
 
-
-
-    print(course.strip(), grade.strip(), zero_num[0])
+    # print(course.strip(), grade.strip(), zero_num[0])
     i = i+1
 
-# print(row[1])
+
+# print(list)
+
+# print(list)
+# def zerocheck():
+#     a = 0
+#     z = 0
+#
+#     while a < 7:
+#
+#         zero = list[a][2]
+#
+#         if zero > 0:
+#             print("you have a zero in " + list[a][0])
+#             z +=1
+#
+#
+#         a += 1
+#
+#     if z < 1:
+#         print("you have no zeros")
+#
+#
+# zerocheck()
