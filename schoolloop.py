@@ -63,28 +63,3 @@ while i < 7:
 
     # print(course.strip(), grade.strip(), zero_num[0])
     i = i+1
-
-
-# print(list)
-
-# print(list)
-# def zerocheck():
-#     a = 0
-#     z = 0
-#
-#     while a < 7:
-#
-#         zero = list[a][2]
-#
-#         if zero > 0:
-#             print("you have a zero in " + list[a][0])
-#             z +=1
-#
-#
-#         a += 1
-#
-#     if z < 1:
-#         print("you have no zeros")
-#
-#
-# zerocheck()
